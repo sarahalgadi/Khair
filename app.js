@@ -11,7 +11,7 @@ const reviewRouter = require('./routes/reviewRoute');
 const accountRouter = require('./routes/accountRoute');
 const Review = require('./model/review');
 
-const MONGO_URI = 'mongodb+srv://khair:sarah@khair.hv3qrke.mongodb.net/Khair';
+const MONGO_URI = "mongodb+srv://khair:sarah@khair.hv3qrke.mongodb.net/Khair";
 
 const {isAuth} = require("./middleware/isAuth")
 
