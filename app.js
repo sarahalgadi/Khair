@@ -41,7 +41,7 @@ app.use(session({
     resave: true,
     saveUnintialized: true,
     store: sessionStore
-}))
+}));
 
 //mongodb connection
 mongoose.connect(MONGO_URI)
