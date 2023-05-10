@@ -11,9 +11,8 @@ const reviewRouter = require('./routes/reviewRoute');
 const accountRouter = require('./routes/accountRoute');
 const Review = require('./model/review');
 
-const MONGO_URI = "mongodb+srv://khair:sarah@khair.hv3qrke.mongodb.net/Khair";
-
-const {isAuth} = require("./middleware/isAuth")
+const {isAuth} = require("./middleware/isAuth");
+require('dotenv').config();
 
 //express app
 const app = express();
@@ -26,7 +25,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 let sessionStore = new MongoDBStore({
-	uri: MONGO_URI,
+	uri: process.env.MONGO_URI,
 	collection: 'mySessions'
 });
 // Catch errors
@@ -44,11 +43,11 @@ app.use(session({
 }))
 
 //mongodb connection
-mongoose.connect(MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)
     .then((result) => {
         console.log("Connected to Khair database...");
-        app.listen(10000, 'localhost', () => {
-            console.log(`Listening on port 10000);
+        app.listen(process.env.port, 'localhost', () => {
+            console.log(`Listening on port ${process.env.PORT});
         });
     })
     .catch((err) => {
