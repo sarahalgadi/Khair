@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 //middleware
-//changed cause of auth
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 let sessionStore = new MongoDBStore({
