@@ -92,6 +92,14 @@
             return true;
           }
         };
+            
+            //Input validation for XSS
+        function sanitizeInput(input) {
+            input = input.replace(/</g, '&lt;');
+            input = input.replace(/>/g, '&gt;');
+  
+          return input;
+        }
       
       </script>
 
