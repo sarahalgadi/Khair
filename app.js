@@ -35,7 +35,7 @@ sessionStore.on('error', function(error) {
 app.use(session({
     secret: 'mysecret',
     cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
+        maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
       },
     resave: true,
     saveUnintialized: true,
