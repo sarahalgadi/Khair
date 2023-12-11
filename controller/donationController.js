@@ -2,10 +2,7 @@ const Donation = require('../model/donation');
 
 const { validationResult } = require('express-validator');
 
-// Open web pages routes
-const donationForm = (request, response) => {
-   response.render('donate', { title: 'Donate' });
-}
+
 
 const addDonation = (request, response) => {
     let selectedCharity1 = request.body.selectedCharity;
