@@ -1,9 +1,8 @@
 const User = require('../model/user');
-const mongoose = require('mongoose');
 
 
 const updateData = async (req, res) => {
-    const { name, email, phoneNumber} = req.body;
+    const email = req.body;
     let userSession = req.session.user;
 
     try {
