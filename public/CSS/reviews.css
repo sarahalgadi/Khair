@@ -21,6 +21,7 @@
   .card-body {
     font-size: 16px;
     line-height: 1.5;
+    text-align: justify;
   }
 
   .deletebtn{
@@ -44,7 +45,4 @@ p a{
 
 .charityname{
   text-transform: uppercase;
-}
-.card-body{
-  text-align: justify;
 }
